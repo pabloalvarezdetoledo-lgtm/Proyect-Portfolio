@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Álvarez de Toledo Rodríguez | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e2a3b',
+                            900: '#0f172a',
+                            950: '#02040a',
+                        },
+                        gold: {
+                            400: '#d4af37',
+                            500: '#c5a028',
+                            600: '#b08d26',
+                        },
+                        slate: {
+                            850: '#151e2e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        
+        .glass-card {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .gold-gradient {
+    background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #d4af37 100%);
+    background-clip: text;              /* propiedad estándar */
+    -webkit-background-clip: text;      /* prefijo para WebKit */
+    color: transparent;                 /* estándar */
+    -webkit-text-fill-color: transparent; /* prefijo para WebKit */
+}
+
+        .hover-gold:hover {
+            border-color: #d4af37;
+            box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.1), 0 4px 6px -2px rgba(212, 175, 55, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-gray-300 antialiased selection:bg-gold-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <span class="text-white text-2xl font-semibold tracking-wide serif cursor-pointer" onclick="window.scrollTo(0,0)">
+                        <span class="text-gold-400 mr-2">P.</span>Álvarez de Toledo
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="text-gray-300 hover:text-gold-400 px-3 py-2 text-xs font-bold uppercase tracking-widest transition duration-300">
+                            About Me
+                        </a>
+                        <a href="#portfolio" class="text-gray-300 hover:text-gold-400 px-3 py-2 text-xs font-bold uppercase tracking-widest transition duration-300 flex items-center">
+                            Research / Projects
+                        </a>
+                        <a href="#contact" class="ml-4 border border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-navy-900 px-5 py-2 rounded-sm text-xs font-bold uppercase tracking-widest transition duration-300">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-40 pb-24 lg:pt-56 lg:pb-40 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center justify-center px-4 py-1.5 mb-8 text-xs font-semibold tracking-widest text-gold-400 uppercase border border-gold-500/30 rounded-sm bg-navy-900/50 backdrop-blur-sm">
+                    Actively seeking: Investment Banking & Corporate Finance internships
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                    Turning complexity into<br>
+                    <span class="italic text-gray-400 font-light">clear investment theses.</span>
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400 font-light leading-relaxed">
+                    Final-year Economics and International Business student at Universidad Nebrija, fully taught in English.  
+                    I combine a strong foundation in <strong>valuation, accounting and financial modeling</strong> with hands-on experience in BBVA Commercial Banking (Business & Institutions Strategy).  
+                    Building a deal-style portfolio that mirrors the work of an Investment Banking analyst: equity research, M&A case studies and macro-financial analysis.
+                </p>
+                <div class="mt-10 flex justify-center gap-5">
+                    <a href="#portfolio" class="px-8 py-4 bg-white text-navy-950 text-sm font-bold uppercase tracking-widest hover:bg-gray-200 transition shadow-lg">
+                        View IB-style Projects
+                    </a>
+                    <a href="https://www.linkedin.com/in/pablo-alvarez-de-toledo/" target="_blank" class="px-8 py-4 border border-white/20 text-white text-sm font-bold uppercase tracking-widest hover:border-gold-400 hover:text-gold-400 transition bg-navy-900/50">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none opacity-20">
+             <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[120px]"></div>
+             <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-gold-600/10 rounded-full blur-[100px]"></div>
+        </div>
+    </section>
+
+    <!-- About Section (Three Pillars) -->
+    <section id="about" class="py-20 bg-navy-900 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/10 border border-white/10 bg-navy-950">
+                <!-- Pillar 1 -->
+                <div class="p-10 text-center group hover:bg-white/5 transition duration-500">
+                    <div class="text-gold-400 text-3xl mb-4 opacity-80 group-hover:opacity-100 transition"><i class="fas fa-university"></i></div>
+                    <h3 class="text-white font-bold text-xl mb-3">Academic Foundation</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        B.A. in Economics and International Business at Universidad Nebrija (2026), fully taught in English.  
+                        Strong focus on corporate finance, financial statements analysis, econometrics and international macroeconomics, with Honors in Globalization & Trade.  
+                        Coursework and projects are deliberately oriented to match the technical expectations of an Investment Banking analyst role.
+                    </p>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="p-10 text-center group hover:bg-white/5 transition duration-500">
+                    <div class="text-gold-400 text-3xl mb-4 opacity-80 group-hover:opacity-100 transition"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-white font-bold text-xl mb-3">Deal & Strategy Mindset</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Internship at BBVA Commercial Banking (Business & Institutions Strategy), working with mid-market and corporate clients.  
+                        Experience supporting strategic plan monitoring, KPI dashboards and internal presentations for senior management, developing a pragmatic understanding of how businesses create value, finance growth and manage risk.  
+                        Comfortable working in Excel, Power BI and PowerPoint under tight deadlines.
+                    </p>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="p-10 text-center group hover:bg-white/5 transition duration-500">
+                    <div class="text-gold-400 text-3xl mb-4 opacity-80 group-hover:opacity-100 transition"><i class="fas fa-landmark"></i></div>
+                    <h3 class="text-white font-bold text-xl mb-3">Differentiated Perspective</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Strong interest in Economic History, Political Economy and Philosophy, including Austrian capital theory and financial crises.  
+                        Regularly guide cultural visits in Madrid for international audiences, using art and history to explain how countries evolve economically.  
+                        This background helps me frame companies and transactions within a broader macro and structural context when building an investment thesis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="portfolio" class="py-24 bg-navy-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 border-b border-white/10 pb-10">
+                <h2 class="text-4xl font-bold text-white mb-4">Research / Projects</h2>
+                <p class="text-gray-500 font-light max-w-2xl mx-auto mb-8">
+                    Selected projects designed to mirror the work of an Investment Banking analyst, reinforced by a quantitative and macro-financial edge.
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button onclick="filterProjects('all')" class="filter-btn active text-xs font-bold uppercase tracking-widest px-4 py-2 text-white border-b-2 border-gold-400 transition" data-filter="all">All</button>
+                    <button onclick="filterProjects('fundamental')" class="filter-btn text-xs font-bold uppercase tracking-widest px-4 py-2 text-gray-500 border-b-2 border-transparent hover:text-white transition" data-filter="fundamental">IB & Strategy</button>
+                    <button onclick="filterProjects('quant')" class="filter-btn text-xs font-bold uppercase tracking-widest px-4 py-2 text-gray-500 border-b-2 border-transparent hover:text-white transition" data-filter="quant">Quant & Tech</button>
+                    <button onclick="filterProjects('history')" class="filter-btn text-xs font-bold uppercase tracking-widest px-4 py-2 text-gray-500 border-b-2 border-transparent hover:text-white transition" data-filter="history">History & Philosophy</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+                
+                <!-- Project: BBVA OPA (Fundamental) -->
+                <div class="project-card group fundamental bg-navy-900 border border-white/5 p-8 hover-gold transition-all duration-300">
+                    <div class="text-blue-500 mb-6 text-sm font-bold tracking-widest uppercase">M&A Case Study</div>
+                    <h3 class="text-2xl text-white font-bold mb-4 group-hover:text-gold-400 transition">BBVA – Sabadell</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed font-light">
+                        Independent M&A-style analysis of BBVA’s attempted acquisition of Banco Sabadell.  
+                        Assesses strategic rationale, market positioning, cost and revenue synergies, integration risks and impact on shareholder value.  
+                        Built as a pitchbook-style deck, emulating the structure of real Investment Banking presentations based on public information and equity research commentary.
+                    </p>
+                    <div class="flex gap-3 mb-8">
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">M&A</span>
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">Strategy</span>
+                    </div>
+                    <a href="bbva-sabadell-case.pdf" target="_blank" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white hover:text-gold-400 transition">
+                        View Deck <i class="fas fa-arrow-right ml-2 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Project: Inditex (Fundamental) -->
+                <div class="project-card group fundamental bg-navy-900 border border-white/5 p-8 hover-gold transition-all duration-300">
+                    <div class="text-blue-500 mb-6 text-sm font-bold tracking-widest uppercase">Equity Research</div>
+                    <h3 class="text-2xl text-white font-bold mb-4 group-hover:text-gold-400 transition">Inditex Coverage</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed font-light">
+                        Ongoing equity research project on Inditex, structured as a full initiation of coverage report.  
+                        Includes business model breakdown, industry overview, benchmarking, DCF valuation and trading comparables, as well as an investment thesis and key catalysts.  
+                        The objective is to replicate the depth and format of a sell-side report used in Investment Banking and Equity Research.
+                    </p>
+                    <div class="flex gap-3 mb-8">
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">Valuation</span>
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">Excel</span>
+                    </div>
+                    <a href="inditex-thesis.pdf" target="_blank" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white hover:text-gold-400 transition">
+                        View Draft <i class="fas fa-arrow-right ml-2 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Project: HMM (Quant) -->
+                <div class="project-card group quant bg-navy-900 border border-white/5 p-8 hover-gold transition-all duration-300">
+                    <div class="text-gold-400 mb-6 text-sm font-bold tracking-widest uppercase">Econometrics & ML</div>
+                    <h3 class="text-2xl text-white font-bold mb-4 group-hover:text-gold-400 transition">Hidden Markov Models for Credit Cycles</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed font-light">
+                        Central component of my undergraduate thesis “Credit Cycles and Capital Misallocations: An Empirical Analysis through Machine Learning”.  
+                        Uses Hidden Markov Models in Python to identify credit and business cycle regimes in Spain and the Euro Area, combining macro and banking variables.  
+                        This work adds a quantitative, regime-switching perspective that can complement traditional top-down views used in IB and capital markets.
+                    </p>
+                    <div class="flex gap-3 mb-8">
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">Python</span>
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">Time Series</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white hover:text-gold-400 transition">
+                        View Code <i class="fas fa-arrow-right ml-2 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Project: Options (Quant) -->
+                <div class="project-card group quant bg-navy-900 border border-white/5 p-8 hover-gold transition-all duration-300">
+                    <div class="text-gold-400 mb-6 text-sm font-bold tracking-widest uppercase">Derivatives & AI</div>
+                    <h3 class="text-2xl text-white font-bold mb-4 group-hover:text-gold-400 transition">Black-Scholes vs Heston</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed font-light">
+                        Personal quantitative finance project focused on European option pricing.  
+                        Compares Black-Scholes with the Heston stochastic volatility model and explores Neural Network-based approximations for pricing and implied volatility.  
+                        Designed as a technical edge for roles that value strong quantitative skills in addition to core corporate finance and valuation knowledge.
+                    </p>
+                    <div class="flex gap-3 mb-8">
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">Python</span>
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">Derivatives</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white hover:text-gold-400 transition">
+                        View Research <i class="fas fa-arrow-right ml-2 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Project: Prado Museum (History & Philosophy) -->
+                <div class="project-card group history bg-navy-900 border border-white/5 p-8 hover-gold transition-all duration-300">
+                    <div class="text-purple-400 mb-6 text-sm font-bold tracking-widest uppercase">Cultural Economics</div>
+                    <h3 class="text-2xl text-white font-bold mb-4 group-hover:text-gold-400 transition">The Prado Economy</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed font-light">
+                        Short essay and notes after the course “El Prado en el siglo XXI”.  
+                        Explores how leading museums are managed, financed and positioned as long-term cultural and economic assets, linking governance, funding models and public value.  
+                        Provides an unconventional yet useful framework to think about intangible assets and long-duration projects.
+                    </p>
+                    <div class="flex gap-3 mb-8">
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">Economic History</span>
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">Institutions</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white hover:text-gold-400 transition">
+                        Read Essay <i class="fas fa-arrow-right ml-2 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Project: Cultural Guide (History & Philosophy) -->
+                <div class="project-card group history bg-navy-900 border border-white/5 p-8 hover-gold transition-all duration-300">
+                    <div class="text-purple-400 mb-6 text-sm font-bold tracking-widest uppercase">History & Rhetoric</div>
+                    <h3 class="text-2xl text-white font-bold mb-4 group-hover:text-gold-400 transition">Spanish Economic History Tours</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed font-light">
+                        Side activity as a cultural guide in Madrid, leading visits to the Prado and Reina Sofía for international visitors in English and Spanish.  
+                        Uses key artworks and historical events to explain Spain’s political and economic trajectory.  
+                        Strengthens public speaking, storytelling and the ability to simplify complex ideas for non-technical audiences, all of which are valuable in client-facing roles.
+                    </p>
+                    <div class="flex gap-3 mb-8">
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">Communication</span>
+                        <span class="px-2 py-1 border border-white/10 text-[10px] uppercase tracking-wider text-gray-400">History</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white hover:text-gold-400 transition">
+                        View Details <i class="fas fa-arrow-right ml-2 text-[10px]"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <section id="contact" class="py-24 bg-navy-950 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6 serif">Contact</h2>
+            <p class="text-gray-400 mb-10 text-lg font-light">
+                Open to Investment Banking, Corporate Finance and Capital Markets opportunities in Madrid and London, including off-cycle and summer analyst internships.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <!-- EMAIL -->
+                <a href="mailto:pabloalvarezdetoledo@gmail.com" class="group flex items-center gap-3 text-gray-400 hover:text-white transition">
+                    <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center group-hover:border-gold-400 group-hover:text-gold-400 transition">
+                        <i class="fas fa-envelope text-sm"></i>
+                    </div>
+                    <span class="lowercase tracking-widest text-xs">pabloalvarezdetoledo@gmail.com</span>
+                </a>
+
+                <!-- LINKEDIN -->
+                <a href="https://www.linkedin.com/in/pablo-alvarez-de-toledo/" target="_blank" class="group flex items-center gap-3 text-gray-400 hover:text-white transition">
+                    <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center group-hover:border-gold-400 group-hover:text-gold-400 transition">
+                        <i class="fab fa-linkedin-in text-sm"></i>
+                    </div>
+                    <span class="lowercase tracking-widest text-xs">linkedin.com/in/pablo-alvarez-de-toledo</span>
+                </a>
+
+                <!-- PHONE -->
+                 <a href="tel:+34687856063" class="group flex items-center gap-3 text-gray-400 hover:text-white transition">
+                    <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center group-hover:border-gold-400 group-hover:text-gold-400 transition">
+                        <i class="fas fa-phone-alt text-sm"></i>
+                    </div>
+                     <span class="lowercase tracking-widest text-xs">+34 687 856 063</span>
+                </a>
+            </div>
+
+            <div class="mt-20 text-[10px] uppercase tracking-widest text-gray-600">
+                &copy; 2024 Pablo Álvarez de Toledo. All Rights Reserved.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Updated Filtering Logic
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                if(btn.dataset.filter === category) {
+                    btn.classList.add('text-white', 'border-gold-400');
+                    btn.classList.remove('text-gray-500', 'border-transparent');
+                } else {
+                    btn.classList.remove('text-white', 'border-gold-400');
+                    btn.classList.add('text-gray-500', 'border-transparent');
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                    setTimeout(() => card.style.opacity = '1', 50);
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.style.display = 'block';
+                        setTimeout(() => card.style.opacity = '1', 50);
+                    } else {
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.display = 'none', 300);
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
